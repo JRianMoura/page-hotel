@@ -19,6 +19,7 @@ const lugaresSorted = () => {
     "Jericoacoara",
     "Gramado",
   ];
+
   const indiceAleatorio = Math.floor(Math.random() * lugares.length);
   const lugarAleatorio = lugares[indiceAleatorio];
   return lugarAleatorio;
