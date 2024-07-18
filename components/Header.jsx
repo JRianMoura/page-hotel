@@ -10,7 +10,7 @@ const Header = () => {
         <div>
           <div className="flex items-center justify-between">
             <Link href="/">
-              <h1 className="text-2xl font-bold text-white">Hotel</h1>
+              <h1 className="text-2xl font-bold text-white">Mari's Hotel</h1>
             </Link>
             {/* desktop nav */}
             <div className="hidden xl:flex">
