@@ -2,8 +2,10 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-
 import "swiper/css";
+
+import { fadeIn } from "../variants";
+import { motion } from "framer-motion";
 
 import { Button } from "./ui/button";
 import Image from "next/image";
@@ -47,18 +49,16 @@ const recommendationData = [
   },
 ];
 
-import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
-
 const Recommendation = () => {
   return (
-    <section className="pb-12 xl:pt-[157px] xl:pb-[112px] bg-soft_green-secondary relative">
-      <motion.div
-        variants={fadeIn("up", 0.4)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0 }}
-      >
+    <motion.section
+      variants={fadeIn("up", 0.4)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0 }}
+      className="pb-12 xl:pt-[157px] xl:pb-[112px] bg-soft_green-secondary relative"
+    >
+      <div>
         <Swiper
           modules={[Autoplay]}
           autoplay={{
@@ -115,7 +115,7 @@ const Recommendation = () => {
             );
           })}
         </Swiper>
-      </motion.div>
+      </div>
       <Image
         src={"recommendation/pattern.svg"}
         width={240}
@@ -123,7 +123,7 @@ const Recommendation = () => {
         alt=""
         className="hidden xl:flex absolute left-[135px] -bottom-[120px]"
       />
-    </section>
+    </motion.section>
   );
 };
 

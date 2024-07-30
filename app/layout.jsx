@@ -7,7 +7,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
-  title: "Hotel Landing Page",
+  title: "Mari`s Hotel",
   description: "Feito por EASYUP",
 };
 

@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -28,10 +29,16 @@ const hotelData = [
 
 const Find = () => {
   return (
-    <section className="py-12 xl:py-36">
+    <motion.section
+      variants={fadeIn("up", 0.4)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0 }}
+      className="py-12 xl:py-36"
+    >
       <div className="container mx-auto">
         <div className="text-center">
-          <h2 className="h2 mb-6">Encontre o seu melhor hotel</h2>
+          <h2 className="h2 mb-6">Encontre o melhor hotel</h2>
           <p className="max-w-[638px] mx-auto mb-8">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
             sapiente rem nam, illo saepe molestiae pariatur ipsam voluptate
@@ -64,7 +71,7 @@ const Find = () => {
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
